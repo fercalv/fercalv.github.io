@@ -3,31 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fernando Calvo Casado | Embedded & Firmware Security</title>
+    <title>Fer Calvo | Embedded & Firmware Security</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 80px auto; padding: 0 20px; background: #fafafa; }
-        h1 { font-size: 1.8rem; margin-bottom: 0.5rem; color: #000; }
-        p { margin-top: 0; color: #666; }
-        .links { margin-top: 30px; }
-        a { color: #0066cc; text-decoration: none; margin-right: 15px; font-weight: 500; }
-        a:hover { text-decoration: underline; }
-        .tag { background: #eee; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem; font-family: monospace; }
+        :root { --bg: #0f1117; --text: #e6edf3; --accent: #2f81f7; --dim: #8b949e; --code-bg: #161b22; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); max-width: 650px; margin: 100px auto; padding: 0 20px; line-height: 1.5; }
+        
+        h1 { font-size: 2rem; margin-bottom: 8px; letter-spacing: -0.5px; }
+        .subtitle { font-size: 1.1rem; color: var(--dim); margin-bottom: 25px; }
+        
+        /* Status Pulse */
+        .status { display: flex; align-items: center; font-size: 0.85rem; color: var(--dim); margin-bottom: 40px; }
+        .pulse { width: 8px; height: 8px; background: #238636; border-radius: 50%; margin-right: 10px; box-shadow: 0 0 0 0 rgba(35, 134, 54, 0.7); animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(35, 134, 54, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(35, 134, 54, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(35, 134, 54, 0); } }
+
+        .section-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-weight: 700; margin-bottom: 15px; }
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 40px; }
+        .tag { background: var(--code-bg); border: 1px solid #30363d; padding: 4px 10px; border-radius: 6px; font-family: ui-monospace, monospace; font-size: 0.85rem; color: #7d8590; }
+        
+        .links a { color: var(--text); text-decoration: none; font-weight: 500; margin-right: 20px; font-size: 0.9rem; transition: color 0.2s; }
+        .links a:hover { color: var(--accent); }
+        
+        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #30363d; font-size: 0.8rem; color: var(--dim); font-family: ui-monospace, monospace; }
     </style>
 </head>
 <body>
-    <h1>Fernando Calvo Casado</h1>
-    <p>Embedded Software Developer & Firmware Security</p>
-    <p><span class="tag">CS Student</span></p>
-    
-    <div class="links">
-        <a href="https://github.com/fercalv">GitHub</a>
-        <a href="mailto:hola@fernandocalvo.com">Contact</a>
+
+    <div class="status">
+        <div class="pulse"></div> 
+        <span>System active: Building secure low-level systems</span>
     </div>
 
-    <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
-    
-    <p style="font-size: 0.8rem; color: #999;">
-        Building secure low-level systems. Full website coming soon.
-    </p>
+    <h1>Fer Calvo</h1>
+    <p class="subtitle">Embedded Software Developer & Firmware Security</p>
+
+    <div class="section-title">Main Stack</div>
+    <div class="tags">
+        <span class="tag">C/C++</span>
+        <span class="tag">Rust</span>
+        <span class="tag">ARM TrustZone</span>
+        <span class="tag">RTOS</span>
+        <span class="tag">Hardware Security</span>
+        <span class="tag">Reverse Engineering</span>
+    </div>
+
+    <div class="links">
+        <a href="https://github.com/fercalv">GitHub</a>
+        <a href="https://linkedin.com/in/tu-perfil">LinkedIn</a>
+        <a href="mailto:hola@tudominio.es">Contact</a>
+    </div>
+
+    <footer>
+        <p>> Grado en Ingeniería Informática (UZ)</p>
+        <p>> Full site under development...</p>
+    </footer>
+
 </body>
 </html>
